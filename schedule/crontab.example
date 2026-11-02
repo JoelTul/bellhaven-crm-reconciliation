@@ -1,0 +1,6 @@
+# Configuration example only; not installed or activated.
+# Linux host: clone into /opt/bellhaven-reconciler, install dependencies,
+# and configure its ignored .env file or a scheduler-provided token.
+# Run daily at 07:00 in the scheduler machine's local timezone.
+# Keep the same data/review.sqlite3 across the app and every scheduled run.
+0 7 * * * cd /opt/bellhaven-reconciler && /opt/bellhaven-reconciler/.venv/bin/python scripts/run_daily.py >> /opt/bellhaven-reconciler/daily.log 2>&1
